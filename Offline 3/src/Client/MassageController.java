@@ -13,7 +13,7 @@ public class MassageController {
     private  TextArea  serverText ;
 
     public void init(String userName) {
-        serverText.setText("Hi " + userName);
+        //serverText.setText("Hi " + userName);
     }
 
     public void setMain(Main main) {
