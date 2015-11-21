@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.Controller">
+   <children>
+      <ListView fx:id="listView" layoutX="46.0" layoutY="85.0" prefHeight="244.0" prefWidth="200.0" />
+      <TextArea fx:id="textArea" layoutX="322.0" layoutY="85.0" prefHeight="177.0" prefWidth="256.0" />
+      <Text layoutX="322.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Massage Box">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client List">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="button" layoutX="416.0" layoutY="278.0" mnemonicParsing="false" onAction="#sendOnAction" prefHeight="21.0" prefWidth="69.0" text="Send">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
