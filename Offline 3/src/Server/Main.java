@@ -6,14 +6,29 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Main extends Application {
+    Stage stage ;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("server.fxml"));
-        primaryStage.setTitle("Server");
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.show();
+        stage = primaryStage ;
+        showServerPage() ;
+    }
+
+    private void showServerPage() throws IOException {
+        FXMLLoader loader = new FXMLLoader() ;
+        loader.setLocation(getClass().getResource("server.fxml"));
+        Parent root = loader.load();
+
+        ServerController controller = loader.getController() ;
+        controller.init();
+        controller.setMain(this) ;
+
+        stage.setTitle("Server");
+        stage.setScene(new Scene(root, 600, 400));
+        stage.show();
     }
 
 
