@@ -1,8 +1,7 @@
 package Client;
 
 import javafx.fxml.FXML;
-
-import java.awt.*;
+import javafx.scene.control.*;
 
 /**
  * Created by MD on 21/11/2015.
@@ -11,10 +10,10 @@ public class MassageController {
     private Main main ;
 
     @FXML
-    private TextArea serveText ;
+    private  TextArea  serverText ;
 
     public void init(String userName) {
-        serveText.append(userName);
+        serverText.setText("Hi " + userName);
     }
 
     public void setMain(Main main) {

@@ -12,7 +12,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="userName" layoutX="178.0" layoutY="80.0" prefHeight="38.0" prefWidth="221.0" promptText="Name" />
+      <TextField fx:id="textField" layoutX="178.0" layoutY="80.0" prefHeight="38.0" prefWidth="221.0" promptText="Name" />
       <Button fx:id="connect" layoutX="253.0" layoutY="170.0" mnemonicParsing="false" onAction="#setConnect" text="Connect">
          <font>
             <Font size="14.0" />

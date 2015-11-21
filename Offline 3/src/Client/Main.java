@@ -37,7 +37,7 @@ public class Main extends Application {
         Parent root = loader.load();
 
         MassageController controller = loader.getController() ;
-        //controller.init(userName) ;
+        controller.init(userName) ;
         controller.setMain(this) ;
 
         stage.setTitle("Massage Box");

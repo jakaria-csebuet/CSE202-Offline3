@@ -2,6 +2,9 @@ package Client;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 import java.awt.*;
 
@@ -12,14 +15,17 @@ public class ClientController {
     private Main main ;
 
     @FXML
-     private TextField textField ;
+    private TextField textField ;
 
     @FXML
-     private Button button ;
+    private  Button connect ;
+
 
     public void setConnect(ActionEvent actionEvent){
+        String userName = textField.getText() ;
+        System.out.println(userName);
         try {
-            main.showMassageBox("hi") ;
+            main.showMassageBox(userName) ;
         }catch (Exception e){
             e.printStackTrace();
         }
