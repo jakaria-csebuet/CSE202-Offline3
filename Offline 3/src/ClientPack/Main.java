@@ -45,7 +45,7 @@ public class Main extends Application {
         controller.setMain(this,socket) ;
 
         stage.setTitle("Massage Box");
-        stage.setScene(new Scene(root, 500, 400));
+        stage.setScene(new Scene(root, 500, 330));
         stage.show();
 
     }

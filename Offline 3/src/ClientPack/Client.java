@@ -31,7 +31,7 @@ public class Client implements Runnable{
             outputStream.writeObject(userName);
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
             String message = (String) inputStream.readObject();
-            if (message.length() == 0) message = "<The Server sent u Nothing>";
+            if (message.length() == 0) message = "No massage!!";
             main.controller.serverText.setText(message);
             socket.close();
         }catch (Exception e){
