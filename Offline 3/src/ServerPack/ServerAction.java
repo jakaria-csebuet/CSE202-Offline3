@@ -1,5 +1,6 @@
 package ServerPack;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -36,7 +37,7 @@ public class ServerAction implements Runnable{
             controller.textArea.clear();
             socket.close();
             controller.list.remove(clientName);
-            observableList.remove(clientName);
+            Platform.runLater(()->observableList.remove(clientName));
             controller.listView.setItems(observableList);
 
         } catch (Exception e) {
