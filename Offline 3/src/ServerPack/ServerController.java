@@ -1,4 +1,4 @@
-package Server;
+package ServerPack;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,17 +8,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 
-import java.awt.*;
+import java.util.Hashtable;
 
 
 public class ServerController {
     private Main main ;
 
-    @FXML
-    private ListView listView ;
+    public Hashtable<String, Thread> list = new Hashtable<>();
 
     @FXML
-    private TextArea textArea ;
+    protected ListView listView ;
+
+    @FXML
+    protected TextArea textArea ;
 
     @FXML
     private Button button ;
@@ -30,13 +32,14 @@ public class ServerController {
         listView.setItems(names);
     }
 
+    public void addItem(String userName){
+        listView.getItems().add(userName) ;
+    }
+
     public void sendOnAction(ActionEvent actionEvent) {
-        String serverMassage = textArea.getText() ;
-        //listView.getItems().add(serverMassage) ;
         String clientName = (String) listView.getFocusModel().getFocusedItem();
-        System.out.println(clientName + " " +serverMassage);
-        listView.getItems().remove(clientName);
-        textArea.clear();
+        Thread thread = list.get(clientName) ;
+        thread.start();
     }
 
     public void setMain(Main main) {
